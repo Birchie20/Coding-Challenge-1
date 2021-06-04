@@ -1,0 +1,88 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>648b61e2-fb93-452e-abd4-327430f24609</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>web_form.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>Suade Labs</Name>
+    <RootNamespace>Suade Labs</RootNamespace>
+    <TestFramework>pytest</TestFramework>
+    <UnitTestPattern>test*.py</UnitTestPattern>
+    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="configuration.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data_extraction.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="data_requirements.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="generate_data.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="produce_report.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Testing\Unit_Tests\test_DataRequirementsClient1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Testing\Unit_Tests\test_ExtractValidateDataFactory.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Testing\Unit_Tests\test_FileDataRequirements.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Testing\Unit_Tests\test_ExtractValidateDataCSV.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Testing\Unit_Tests\test_ProduceReport.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utilities.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="web_form.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="templates\" />
+    <Folder Include="Testing\" />
+    <Folder Include="Testing\Test_Data\Test_Data_0_Correct\" />
+    <Folder Include="Testing\Test_Data\Test_Data_3_Missing_Cell\" />
+    <Folder Include="Testing\Test_Data\Test_Data_1_Missing_File\" />
+    <Folder Include="Testing\Test_Data\Test_Data_2_Missing_Field\" />
+    <Folder Include="Testing\Unit_Tests\" />
+    <Folder Include="Testing\Test_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="templates\home_page.html" />
+    <Content Include="templates\requirements_page.html" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
