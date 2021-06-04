@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 import pandas as pd
 import os
-from Utilities import Utilities, DictObjectView
+from utilities import Utilities, DictObjectView
 
 class IExtractValidateData(ABC):
 

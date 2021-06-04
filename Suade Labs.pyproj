@@ -55,7 +55,7 @@
     <Compile Include="Testing\Unit_Tests\test_ProduceReport.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Utilities.py">
+    <Compile Include="utilities.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="web_form.py">
