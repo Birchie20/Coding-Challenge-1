@@ -155,8 +155,8 @@ class FileDataRequirements(object):
                         
 
         if missing_fields_dict:
-            error_field_strings = {k:k+'\n\t'+',\n\t'.join(missing_fields_dict[k]) for k in missing_fields_dict.keys()}
-            error_field_string = '\n'.join(error_field_strings.values())
+            error_field_strings = {k:k+':\n\t'+',\n\t'.join(missing_fields_dict[k]) for k in missing_fields_dict.keys()}
+            error_field_string = '.\n'.join(error_field_strings.values())
             raise ValueError(f"The following columns were not present in the files shown: \n{error_field_string}\n\n Please update and try again")
         
         if null_entries_list:

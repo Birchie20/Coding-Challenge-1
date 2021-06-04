@@ -41,7 +41,7 @@ def test_FileDataRequirements_MissingField(dr):
     with pytest.raises(Exception) as exc_info:
         fdr.check_and_format_fields(de)
     assert exc_info.type is ValueError
-    assert exc_info.value.args[0] == "The following columns were not present in the files shown: \norder_lines\n\tproduct_id,\n\tquantity\norders\n\tvendor_id\n\n Please update and try again"
+    assert exc_info.value.args[0] == "The following columns were not present in the files shown: \norder_lines:\n\tproduct_id,\n\tquantity.\norders:\n\tvendor_id\n\n Please update and try again"
 
 
 

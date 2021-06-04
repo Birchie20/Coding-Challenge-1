@@ -14,6 +14,7 @@
     <TestFramework>pytest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
     <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
+    <Folder Include="requirements\" />
     <Folder Include="templates\" />
     <Folder Include="Testing\" />
     <Folder Include="Testing\Test_Data\Test_Data_0_Correct\" />
@@ -73,8 +75,39 @@
     <Folder Include="Testing\Test_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\commissions.csv" />
+    <Content Include="data\orders.csv" />
+    <Content Include="data\order_lines.csv" />
+    <Content Include="data\products.csv" />
+    <Content Include="data\product_promotions.csv" />
+    <Content Include="data\promotions.csv" />
+    <Content Include="README.txt" />
+    <Content Include="requirements\requirements.txt" />
     <Content Include="templates\home_page.html" />
     <Content Include="templates\requirements_page.html" />
+    <Content Include="Testing\Test_Data\Test_Data_0_Correct\commissions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_0_Correct\orders.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_0_Correct\order_lines.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_0_Correct\products.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_0_Correct\product_promotions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_0_Correct\promotions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_1_Missing_File\orders.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_1_Missing_File\order_lines.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_1_Missing_File\products.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_1_Missing_File\product_promotions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_1_Missing_File\promotions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_2_Missing_Field\commissions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_2_Missing_Field\orders.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_2_Missing_Field\order_lines.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_2_Missing_Field\products.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_2_Missing_Field\product_promotions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_2_Missing_Field\promotions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_3_Missing_Cell\commissions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_3_Missing_Cell\orders.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_3_Missing_Cell\order_lines.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_3_Missing_Cell\products.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_3_Missing_Cell\product_promotions.csv" />
+    <Content Include="Testing\Test_Data\Test_Data_3_Missing_Cell\promotions.csv" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
